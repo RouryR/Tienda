@@ -1,0 +1,151 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 20 sept 2023, 20:09:27
+    Author     : LABORATORIO 04
+*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    z-index: 2;
+
+}
+
+aside {
+    background-color: #ff9999;  /*Color de fondo de la barra lateral */
+    position: fixed;  /*Hacer que la barra lateral esté fija a la izquierda */
+    top: 85px;  /*Alinear la barra lateral debajo del encabezado */
+    bottom: 0;  /*Extender la barra lateral hasta la parte inferior de la página */
+    padding: 1px;  /*Espaciado interno de la barra lateral */
+    left: 0px;  /*Alinear la barra lateral completamente a la izquierda */
+    width: 18%;
+    text-align: center;
+  overflow-y: auto; /* Habilita el scroll vertical cuando el contenido excede la altura máxima */
+    scrollbar-width: thin; /* Para navegadores Firefox */
+    scrollbar-color: #ff9999 transparent; /* Para navegadores Firefox */
+    
+}
+
+aside::-webkit-scrollbar {
+    width: 5px; /* Ancho de la barra de desplazamiento */
+}
+
+aside::-webkit-scrollbar-thumb {
+    background-color: #ff9999; /* Color de la barra de desplazamiento */
+}
+
+section {
+    
+    border-left: 1px solid black;
+    background-color: lightgray;
+    margin-left: 18%;  /*mover hacia la izquierda */
+    width: 82%; /*ancho */
+    bottom: 0;
+    padding: 5px;
+    margin-top: 80px; /* Espacio entre el encabezado y la sección */
+    position: relative; /* Necesario para usar z-index */
+    z-index: 1; /* Establece el z-index de la sección */
+}
+
+.card {
+    margin: 0 auto; /* Esto centrará horizontalmente la tarjeta */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 0 1px; /* Ajusta el espaciado interno del contenedor del logo según tus necesidades */
+    height: 80px;
+    width: 40%;
+}
+
+.logo-img {
+    height: 350px; /* Ajusta según el tamaño deseado */
+    width: auto;
+    max-width: 80%; /* Asegura que el ancho no se extienda más allá del contenedor */
+}
+
+
+
+.nav-buttons {
+    flex: 1;
+    margin: 0;
+}
+
+.search-container {
+    padding: 0 10px;
+}
+
+
+body, html{
+    font-family: sans-serif;
+    padding: 80px 20px 0;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-fixed-width {
+    width: auto; 
+}
+
+
+.search-container button {
+    height: 40px; /* Ajusta la altura según tus necesidades */
+    font-size: 18px; /* Cambiar el tamaño del texto a 18px */
+    color: #ffffff; /* Cambiar el color del texto a rojo (#ffffff) */
+    margin-top: 2px;
+    background-color: #1B2B40;
+    
+}
+
+.search-container input[type="search"]{
+    font-size: 17px; /* Cambiar el tamaño del texto a 18px */
+    color: #ffffff; /* Cambiar el color del texto a rojo (#ffffff) */
+/*    background-color: #000000;*/
+    margin-top: 2px;
+    padding: 7px 80px; /* Ajusta el espaciado interno según tus necesidades */
+   color: #000000; 
+}
+
+
+
+
+.image-container img {
+    font-size: 13px; /* Tamaño del texto */
+    height: 45px; /* Altura de las imágenes */
+    width: auto;
+    margin-left: 10px; /* Espaciado entre las imágenes */
+    
+}
+
+.navbar{
+    background-color: #990000;  /*Color de fondo de la barra lateral */
+     border-bottom: 1px solid black;
+}
+
+/* Estilos para los enlaces de la lista de pestañas */
+.nav-pills .nav-link {
+    font-size: 18px; /* Cambiar el tamaño del texto a 18px */
+    color: #ffffff; /* Cambiar el color del texto a rojo (#ffffff) */
+    background-color: #000000;
+    margin-top: 18px
+        
+}
+
+.centered-tabs {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+    border-bottom: 1px solid black; /* Ajusta el ancho y color del borde según tus preferencias */
+   
+}
+
+

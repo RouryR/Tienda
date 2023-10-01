@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Iframe</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="estilo/estilos.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <header class="header"> <!-- Etiqueta para ofrecerle al browser info de que es un encabezado --> 
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid d-flex justify-content-between align-items-center">
+
+                    <div class="logo-container">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/logo.svg" alt="TechShop Logo" class="logo-img">
+                        </a>
+                    </div>
+                    <!--                    <div class="nav-buttons d-flex  align-items-center">
+                                            <a href="audio.html" class="btn btn-primary btn-lg btn-fixed-width me-3">Audio</a>
+                                            <a href="video.html" class="btn btn-secondary btn-fixed-width me-3">Video</a>
+                                            <a href="iframe.html" class="btn btn-success btn-fixed-width me-3">iFrame</a>
+                                            <a href="formulario.html" class="btn btn-danger btn-fixed-width me-3">Formulario</a>
+                                        </div>-->
+
+                    <ul class="nav nav-pills mb-3 " id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active me-3" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab"  aria-selected="true">Audio</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link me-3" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-selected="false">Video</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link me-3" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-selected="false">iFrame</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link me-3" id="pills-formulario-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-selected="false">Formulario</button>
+                        </li>
+                    </ul>
+                    <div class="search-container d-flex align-items-center">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                            <button class="btn btn-warning me-2" type="submit">Buscar</button>
+                        </form>
+                        <div class="image-container d-flex align-items-center">
+                            <img src="img/user.svg" alt="" >
+                            <img src="img/shopping.svg" alt="" >
+                        </div>
+                    </div>
+            </nav>
+        </header>
+
+
+        <aside>
+            <!-- Contenido de la barra lateral izquierda -->
+            <p style="color: white; font-weight: bold; font-size: 25px; background-color: #990000; margin-top: 0; text-align: center;">Home.</p>
+            <p style="color: black; font-weight: bold; font-size: 20px; ">El producto más vendido.</p>
+            <p>Según los datos del mes pasado el producto x203 fue el que resgistró mas ventas el mes anterior.</p>
+            <div class="card" style="width: 18rem;">
+                <img src="img/card1.gif" class="card-img-top" alt="Card 1" width="288" height="346">
+                <a href="#" class="btn btn-info">Ir a algún lugar</a>
+            </div>
+        </aside>
+
+        <section id="contenido">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="img/banner1.png" class="d-block w-100" alt="slide 1" width="200" height="200">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="img/banner2.png" class="d-block w-100" alt="slide 2" width="200" height="200">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="img/banner3.png" class="d-block w-100" alt="slide 3" width="200" height="200">
+                    </div> 
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+
+            <h2>Ejemplos de iframe</h2>
+            <article>
+                <header><h3>La página de la Fidélitas</h3></header>
+                <iframe src="https://sistemas.ufidelitas.ac.cr/" width="700" height="400"> </iframe>
+                <footer>Escuela de Sistemas de la Fide</footer>
+            </article>
+            <article>
+                <header><h3>vídeo de Youtube</h3></header>
+                <iframe width="500" height="280"
+                        src="https://www.youtube.com/embed/YxEvXAL8Mx4?si=urRRkcl_MI-gEpSR"
+                        title="Youtuber"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+                <footer>Alguién mostrando html5</footer>
+            </article>
+            <article>
+                <header><h3>Stem Center</h3></header>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7858.6210680400045!2d-84.1401132773515!3d9.991187158209314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0faf89f62fc53%3A0x920a942930d65331!2sUniversidad%20Fid%C3%A9litas%20Heredia!5e0!3m2!1ses!2scr!4v1695862100058!5m2!1ses!2scr"
+                    width="600"
+                    height="450"
+                    style="border:0;" allowfullscreen=""></iframe>
+                <footer>La ubicación del stem center en Google maps </footer>
+            </article>
+    </body>
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/myscript.js"></script>
+</html>
