@@ -89,7 +89,7 @@ public class ProjectConfig implements WebMvcConfigurer {
                 )
                 .formLogin((form) -> form
                 .loginPage("/login").permitAll())
-                .logout((logout) -> logout.permitAll());
+              .logout((logout) -> logout.logoutSuccessUrl("/login").permitAll());
         return http.build();
     }
 /* El siguiente método se utiliza para completar la clase no es 
@@ -113,17 +113,6 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .build();
         return new InMemoryUserDetailsManager(user, sales, admin);
     }
-   @Bean
-SecurityWebFilterChain http(ServerHttpSecurity http) throws Exception {
-    DelegatingServerLogoutHandler logoutHandler = new DelegatingServerLogoutHandler(
-            new WebSessionServerLogoutHandler(), new SecurityContextServerLogoutHandler()
-    );
 
-    http
-        .authorizeExchange((exchange) -> exchange.anyExchange().authenticated())
-        .logout((logout) -> logout.logoutHandler(logoutHandler));
-
-    return http.build();
-}
     
 }
