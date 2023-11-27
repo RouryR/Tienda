@@ -8,8 +8,9 @@
     <body>
         <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal-->
         <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
-            <div class="container"sec:authorize="hasRole('ROLE_ADMIN')>
+            <div class="container" sec:authorize="hasRole('ROLE_ADMIN')">    
                 <div class="row">
+                    
                     <div class="col-md-3">   
                         <button 
                             type="button" 
@@ -22,6 +23,7 @@
                 </div>
             </div>
         </section>
+
         <!-- 2 Fragmento para agregar categoria, es la ventana modal -->
         <section th:fragment="agregarCategoria">
             <div id="agregarCategoria" 
@@ -60,8 +62,10 @@
                 </div>
             </div>
         </section>
+
         <!-- 3 Sección principal para mostrar la informaccion de la entidad categoria -->
         <section th:fragment="listadoCategorias" id="categorias">
+                        
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
@@ -83,7 +87,7 @@
                                             <td>[[${categoria.descripcion}]]</td>
                                             <td th:text="${categoria.activo} ? 'Activa' : 'Inactiva'" />
                                             <td sec:authorize="hasRole('ROLE_ADMIN')">
-                                            <td><a th:href="@{/categoria/eliminar/}+${categoria.idCategoria}"
+                                                <a th:href="@{/categoria/eliminar/}+${categoria.idCategoria}"
                                                    class="btn btn-danger">
                                                     <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
                                                 <a th:href="@{/categoria/modificar/}+${categoria.idCategoria}"
@@ -108,6 +112,7 @@
                 </div>
             </div>
         </section>
+
         <!-- 4 Fragmento que se utiliza en la página modifca.html -->
         <section th:fragment="editarCategoria">
             <div class="row">
@@ -159,6 +164,7 @@
                 </div>
             </div>
         </section>
+
         <!-- 5 Fragmento que se utiliza en el fragmento anterior -->
         <section th:fragment="botonesEditar">
             <div class="container py-4 mb-4 bg-light">
